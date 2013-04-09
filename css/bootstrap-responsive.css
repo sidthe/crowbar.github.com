@@ -8,6 +8,20 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
+
+
+/* Custom stuff added by author of crowbar.github.com */
+
+.edit-icon:before {
+        content: '\f411';
+        display: inline-block;
+        -webkit-font-smoothing: antialiased;
+        font: normal 32px/1 'Genericons';
+        vertical-align: middle;
+}
+
+
+
 .clearfix {
   *zoom: 1;
 }

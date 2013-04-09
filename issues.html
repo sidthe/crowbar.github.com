@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <link rel="stylesheet" href="/css/bootstrap.css">
+    <link href="/css/genericons.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/bootstrap-responsive.css">
     <link rel="stylesheet" href="/themes/inspiritas/inspiritas.css">
     <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/builds/80037b02082b29f5f9cea127cab2a4ba4365ec67.css">
@@ -31,11 +32,11 @@
               <li >
                 <a href="/home.html">Home</a> 
               </li>
-              <li class="active">
+              <li >
                 <a href="/docs/getting-help.html">Docs</a> 
               </li>
-              <li >
-                <a href="/docs/bugs.html">Bugs</a> 
+              <li class="active">
+                <a href="/issues.html">Bugs</a> 
               </li>
               <li >
                 <a href="javascript:void(0);" onclick="alert('Coming Soon')">Screenshots</a> 
@@ -48,13 +49,14 @@
     </div>
 
     <div class="container">
-      <a class="btn btn-large btn-primary btn-block visible-phone" href="#"><span class="btn-label">Sign Up Today!</span></a>
+<!--      <a class="btn btn-large btn-primary btn-block visible-phone" href="#"><span class="btn-label">Sign Up Today!</span></a> -->
       <div class="row">
         <div class="span4">
           <ul class="nav nav-stacked nav-list">
             <li class="nav-header">USERS</li>
             <li>
-              <a href="/docs/getting-started.html">Getting Started</a> 
+              <a href="/docs/getting-started/">Getting Started</a>
+                
             </li>
 
 <!--            <li>
@@ -103,25 +105,42 @@
         </div>
         <div class="span8">
           <p></p>
-		<h2 id='filing_defects'>Filing Defects</h2>
+		      
+ <h2 id='filing_defects_or_enhancement_requests'>Filing Defects or Enhancement Requests</h2>
 
-<p>If you would like to open a defect you have an enhancement request, please use the project <a href='https://github.com/crowbar/crowbar/issues'>GitHub Issues Tracker</a>. Please do not open issues against individual barclamps, we are currently consolidating defects against the parent Crowbar project. This may change in the future. Also please make sure to use the following template:</p>
+<p>If you would like to open a defect you have an enhancement request, please use the project <a href='https://github.com/crowbar/crowbar/issues'><strong>GitHub Issues Tracker</strong></a>. Please do not open issues against individual barclamps, we are currently consolidating defects against the parent Crowbar project. <strong>Please make sure to use the following templates (these can simply be copy and pasted into Github)</strong>. Since Github issues currently don&#8217;t allow for file uploads, we suggest you use <a href='http://www.fileswap.com/'>Fileswap.com</a>.</p>
 
-<blockquote>
-<p>Description:</p>
+<h3 id='defect_template'>Defect Template:</h3>
+<pre>
+**Description:**
+A brief description of what the problem is.
 
-<p>Version/Build:</p>
+**Version/Build:** Please always specify which artifact/build/branch you've used.
 
-<p>Browsers Used:</p>
+**Browsers Used:** If this is GUI related please specify your browser type and version.
+ 
+**Reproduction Steps:**
+ 1. It's very useful to understand
+ 1. How to reproduce the condition you
+ 1. Describe, please be reasonably specific here
 
-<p>Reproduction Steps: 1. 1. 1.</p>
+**Observed Results:**
+What happens when the above steps are executed.
 
-<p>Observed Results:</p>
+**Expected Results:**
+What do you expect to happen when the above steps are executed.
+ 
+**Impact:**
+What's the impact of this issue.
+</pre>
+<h3 id='enhancement_template'>Enhancement Template:</h3>
+<pre>
+**Description:**
+What enhancement would you like to propose? Even better if you can describe it in terms of a [User Story]( http://en.wikipedia.org/wiki/User_story#Examples ).
 
-<p>Expected Results:</p>
-
-<p>Impact:</p>
-</blockquote>
+**Role/Usage:**
+How do you use Crowbar today? Are you deploying OpenStack or Hadoop? What's your role?
+</pre>
           <p></p>
         </div>
       </div>

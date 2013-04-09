@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <title>Getting Started - Installing Crowbar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link href="/css/genericons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="/themes/inspiritas/inspiritas.css">
+    <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/builds/80037b02082b29f5f9cea127cab2a4ba4365ec67.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+  </head>
+  
+  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="/themes/inspiritas/inspiritas.css">
+    <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/builds/80037b02082b29f5f9cea127cab2a4ba4365ec67.css">
+    <link rel="stylesheet" href="/css/divshot-util.css">
+    <link rel="stylesheet" href="/css/divshot-canvas.css">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/home.html"><img src="/images/crowbar-white.png" class="pull-left"></a>
+          <div class="navbar-content">
+            <ul class="nav">
+              <li >
+                <a href="/home.html">Home</a> 
+              </li>
+              <li class="active">
+                <a href="/docs/getting-help.html">Docs</a> 
+              </li>
+              <li >
+                <a href="/issues.html">Bugs</a> 
+              </li>
+              <li >
+                <a href="javascript:void(0);" onclick="alert('Coming Soon')">Screenshots</a> 
+              </li>
+            </ul>
+          </div>
+          <a href="http://crowbar.zehicle.com/" class="btn pull-right btn-success btn-large">Download</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+<!--      <a class="btn btn-large btn-primary btn-block visible-phone" href="#"><span class="btn-label">Sign Up Today!</span></a> -->
+      <div class="row">
+        <div class="span4">
+          <ul class="nav nav-stacked nav-list">
+            <li class="nav-header">USERS</li>
+            <li>
+              <a href="/docs/getting-started/">Getting Started</a>
+                
+                <ul class="nav nav-stacked nav-list">
+                  <li><a href="/docs/getting-started/config-network.html">Configuring the Network</a></li>
+                  <li><a href="/docs/getting-started/install-admin-node.html">Installing the Admin Node</a></li>
+                  <li><a href="/docs/getting-started/install-crowbar.html">Installing Crowbar</a></li>
+                  <li><a href="/docs/getting-started/discover-nodes.html">Discovering Nodes</a></li>
+                  <li><a href="/docs/getting-started/install-openstack.html">Installing OpenStack</a></li>
+                  <li><a href="/docs/getting-started/install-hadoop.html">Installing Hadoop</a></li>
+                  <li><a href="/docs/getting-started/troubleshooting.html">Troubleshooting the Installation</a></li>
+
+
+                </ul>
+                
+            </li>
+
+<!--            <li>
+              <a href="#">User Guide</a> 
+            </li>
+            <li>
+              <a href="#">Deployment Guide</a> 
+            </li>
+            <li>
+              <a href="#">Troubleshooting</a> 
+            </li>
+            <li class="divider"></li>
+-->
+            <li class="nav-header">Developers</li>
+<!--            <li>
+              <a href="#">Development Guide</a> 
+            </li>
+            <li>
+              <a href="#">Barclamps</a> 
+            </li>
+-->
+            <li>
+              <a href="/docs/testing.html">Testing</a> 
+            </li>
+<!--            <li>
+              <a href="#">Contributing</a> 
+            </li>
+-->
+            <li class="divider"></li>
+<!-- TODO: fix this           <li class="active">
+              <a href="#">Getting Help</a> 
+            </li>
+-->
+            <li>
+              <a href="/docs/getting-help.html">Getting Help</a> 
+            </li>
+
+            <li>
+              <a href="/docs/faq.html">FAQ</a> 
+            </li>
+<!--            <li>
+              <a href="#">Release Notes</a> 
+            </li>
+-->
+          </ul>
+        </div>
+        <div class="span8">
+          <p></p>
+		      
+    <a title="Edit this document" class="pull-left" href="https://github.com/crowbar/barclamp-crowbar/edit/master/doc/gettingstarted/1000_installing_crowbar.md">
+        <span class="btn-label edit-icon"></span>
+    </a>
+    <!-- <div class="edit-icon">You're a Star!</div> -->
+
+ <h1 id='installing_crowbar'>Installing Crowbar</h1>
+
+<p>The initial admin node installation does not complete the Crowbar installation, to allow the network configuration to be customized. After any customizations have been made, the final Crowbar installation can be completed. The networks cannot be reconfigured after Crowbar is installed.</p>
+
+<p>To complete the Crowbar installation:</p>
+
+<ol>
+<li>
+<p>Log onto the admin node. The default username is <em>crowbar</em>, password is <em>crowbar</em>.</p>
+</li>
+
+<li>
+<p>Verify or edit the network configuration file in your editor of choice. For example:</p>
+
+<pre><code>$ vi /opt/dell/barclamps/network/chef/data_bags/crowbar/bc-template-network.json</code></pre>
+</li>
+
+<li>
+<p>Once you have verified or modified the Network JSON, enter the following commands in a terminal session:</p>
+
+<pre><code>$ sudo –i
+$ cd /tftpboot/ubuntu_dvd/extra
+$ ./install systemname.yourdomain.com</code></pre>
+</li>
+</ol>
+
+<p>The Crowbar installation will be started in a screen session. You can attach to this session to follow the install process. The install logs are written to <em>/var/log</em>, and can be checked if there are any errors during the install process:</p>
+
+<pre><code>	$ tail -50f /var/log/install.log</code></pre>
+
+<p>The main cause of errors at this point is usually syntax errors caused while modifying the network configuration. If an error occurs, check the log files, fix any syntax errors, and then restart the Crowbar install process.</p>
+
+<p><strong>Note:</strong> This can take some time; please be patient.</p>
+
+<p>When the Crowbar installation completes, the admin node will remain at a shell prompt. At this point, all Crowbar and operations services have started.</p>
+
+<h3 id='crowbar_and_operations_service_access'>Crowbar and Operations Service Access</h3>
+
+<ul>
+<li><strong>SSH Service</strong> - <em>SSH crowbar@192.168.124.10</em>, credentials are <em>crowbar</em></li>
+
+<li><strong>Crowbar UI</strong> - <em>http://192.168.124.10:3000</em>, credentials are <em>crowbar/crowbar</em></li>
+
+<li><strong>Nagios UI</strong> - <em>http://192.168.124.10/nagios3</em>, credentials are <em>nagiosadmin/password</em></li>
+
+<li><strong>Ganglia UI</strong> - <em>http://192.168.124.10/ganglia</em>, credentials are <em>nagiosadmin/password</em></li>
+
+<li><strong>Chef UI</strong> - <em>http://192.168.124.10:4040</em>, credentials are <em>admin/password</em></li>
+</ul>
+          <p></p>
+        </div>
+      </div>
+            <div class="container-fluid">
+        <img src="/images/dell-open-source.png" width="175" height="49" class="pull-right"> 
+      </div>
+
+    </div>
+  </body>
+
+</html>

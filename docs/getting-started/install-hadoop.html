@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <title>Getting Started - Installing Hadoop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link href="/css/genericons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="/themes/inspiritas/inspiritas.css">
+    <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/builds/80037b02082b29f5f9cea127cab2a4ba4365ec67.css">
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+  </head>
+  
+  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.css">
+    <link rel="stylesheet" href="/themes/inspiritas/inspiritas.css">
+    <link rel="stylesheet" href="https://djyhxgczejc94.cloudfront.net/builds/80037b02082b29f5f9cea127cab2a4ba4365ec67.css">
+    <link rel="stylesheet" href="/css/divshot-util.css">
+    <link rel="stylesheet" href="/css/divshot-canvas.css">
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="/home.html"><img src="/images/crowbar-white.png" class="pull-left"></a>
+          <div class="navbar-content">
+            <ul class="nav">
+              <li >
+                <a href="/home.html">Home</a> 
+              </li>
+              <li class="active">
+                <a href="/docs/getting-help.html">Docs</a> 
+              </li>
+              <li >
+                <a href="/issues.html">Bugs</a> 
+              </li>
+              <li >
+                <a href="javascript:void(0);" onclick="alert('Coming Soon')">Screenshots</a> 
+              </li>
+            </ul>
+          </div>
+          <a href="http://crowbar.zehicle.com/" class="btn pull-right btn-success btn-large">Download</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+<!--      <a class="btn btn-large btn-primary btn-block visible-phone" href="#"><span class="btn-label">Sign Up Today!</span></a> -->
+      <div class="row">
+        <div class="span4">
+          <ul class="nav nav-stacked nav-list">
+            <li class="nav-header">USERS</li>
+            <li>
+              <a href="/docs/getting-started/">Getting Started</a>
+                
+                <ul class="nav nav-stacked nav-list">
+                  <li><a href="/docs/getting-started/config-network.html">Configuring the Network</a></li>
+                  <li><a href="/docs/getting-started/install-admin-node.html">Installing the Admin Node</a></li>
+                  <li><a href="/docs/getting-started/install-crowbar.html">Installing Crowbar</a></li>
+                  <li><a href="/docs/getting-started/discover-nodes.html">Discovering Nodes</a></li>
+                  <li><a href="/docs/getting-started/install-openstack.html">Installing OpenStack</a></li>
+                  <li><a href="/docs/getting-started/install-hadoop.html">Installing Hadoop</a></li>
+                  <li><a href="/docs/getting-started/troubleshooting.html">Troubleshooting the Installation</a></li>
+
+
+                </ul>
+                
+            </li>
+
+<!--            <li>
+              <a href="#">User Guide</a> 
+            </li>
+            <li>
+              <a href="#">Deployment Guide</a> 
+            </li>
+            <li>
+              <a href="#">Troubleshooting</a> 
+            </li>
+            <li class="divider"></li>
+-->
+            <li class="nav-header">Developers</li>
+<!--            <li>
+              <a href="#">Development Guide</a> 
+            </li>
+            <li>
+              <a href="#">Barclamps</a> 
+            </li>
+-->
+            <li>
+              <a href="/docs/testing.html">Testing</a> 
+            </li>
+<!--            <li>
+              <a href="#">Contributing</a> 
+            </li>
+-->
+            <li class="divider"></li>
+<!-- TODO: fix this           <li class="active">
+              <a href="#">Getting Help</a> 
+            </li>
+-->
+            <li>
+              <a href="/docs/getting-help.html">Getting Help</a> 
+            </li>
+
+            <li>
+              <a href="/docs/faq.html">FAQ</a> 
+            </li>
+<!--            <li>
+              <a href="#">Release Notes</a> 
+            </li>
+-->
+          </ul>
+        </div>
+        <div class="span8">
+          <p></p>
+		      
+    <a title="Edit this document" class="pull-left" href="https://github.com/crowbar/barclamp-crowbar/edit/master/doc/gettingstarted/2500_installing_hadoop.md">
+        <span class="btn-label edit-icon"></span>
+    </a>
+    <!-- <div class="edit-icon">You're a Star!</div> -->
+
+ <h1 id='installing_hadoop'>Installing Hadoop</h1>
+
+<p>Use these instructions to install and configure a Hadoop cluster using Crowbar.</p>
+
+<ol>
+<li>
+<p>Configure and apply Hadoop barclamp proposals in Crowbar (this step also allocates nodes).</p>
+</li>
+
+<li>
+<p>Verify nodes statuses (all nodes icons are green in Crowbar <em>Nodes</em> UI).</p>
+</li>
+
+<li>
+<p>Troubleshoot the Chef client if necessary by running the following command on problematic nodes:</p>
+
+<pre><code>$ chef-client</code></pre>
+</li>
+
+<li>
+<p>Verify nodes statuses in the Crowbar UI by navigating to <em>Nodes &gt; Dashboard</em>, and then ensuring that all nodes&#8217; icons are green.</p>
+</li>
+
+<li>
+<p>Print the <em>Nodes &gt; Inventory</em> screen for later reference, when you select services. See <strong>Service Selection</strong> below.</p>
+</li>
+
+<li>
+<p>Invoke the Cloudera Manager UI.</p>
+
+<p>a. Upload the Cloudera Manager license key, if applicable.</p>
+
+<p>b. Log out of Cloudera Manager.</p>
+
+<p>c. Restart the Cloudera Manager server in order for the license to take effect.</p>
+</li>
+
+<li>
+<p>Open an SSH console on the node that has the <em>clouderamanager-server</em> (Cloudera Manager) role applied to it. The login credentials are <em>root/crowbar</em>. Then execute the following commands:</p>
+
+<pre><code>$ cd /etc/init.d
+$ sudo service cloudera-scm-server restart</code></pre>
+</li>
+
+<li>
+<p>Log back into the Cloudera Manager UI.</p>
+</li>
+
+<li>
+<p>Click the <em>Continue</em> button.</p>
+</li>
+</ol>
+
+<h2 id='node_search'>Node Search</h2>
+
+<ol>
+<li>Enter the IP range or hostname search pattern for all Hadoop cluster nodes. Cloudera Manager will search the cluster using this pattern and will consider any node with a Cloudera Manager agent process running on it as a valid Hadoop node candidate. For example:</li>
+</ol>
+
+<ul>
+<li><em>192.168.124.<span>80-90</span></em> will attempt to discover all the nodes between 192.168.124.80 and 192.168.124.90</li>
+
+<li><em>192.168.124.8<span>1-3</span></em> will attempt to discover 192.168.124.81, 192.168.124.82, and 192.168.124.83</li>
+
+<li>For additional information on Cloudera Manager search patterns, see the <em>search for hostnames and/or IP addresses using patterns</em> link on the Cloudera Manager user Interface.</li>
+</ul>
+
+<ol>
+<li>Optionally, enter the host’s SSH Port. The default port is 22.</li>
+
+<li>Click the <em>Search</em> button.</li>
+</ol>
+
+<h2 id='node_search_results'>Node Search Results</h2>
+
+<ol>
+<li>Verify that all your Hadoop nodes have been discovered.</li>
+
+<li>Make any cluster configuration adjustments by selecting or deselecting any checkboxes.</li>
+</ol>
+
+<h2 id='repository_configuration'>Repository Configuration</h2>
+
+<ol>
+<li>
+<p>Click the <em>Install CDH On Selected Hosts</em> button.</p>
+
+<p>a. Select <em>CDH4</em> for installation.</p>
+
+<p>b. Select <em>Custom Repository for CDH</em>.</p>
+
+<p>c. Enter this URL - <em>http://192.168.124.10:8091/redhat-6.2/crowbar-extra/clouderamanager</em></p>
+</li>
+
+<li>
+<p>Select <em>None</em> to decline installing Impala.</p>
+
+<p>a. Or, select <em>Custom Repository</em> for Impala.</p>
+
+<p>b. Enter this URL - <em><a title='Impala repository' href='http://beta.cloudera.com/impala/redhat/6/x86_64/impala/0/'>http://beta.cloudera.com/impala/redhat/6/x86_64/impala/0/</a></em></p>
+</li>
+
+<li>
+<p>Select <em>Custom Repository for Cloudera Manager</em>.</p>
+
+<p>a. Enter this URL - <em>http://192.168.124.10:8091/redhat-6.2/crowbar-extra/clouderamanager</em></p>
+</li>
+
+<li>
+<p>Leave the <em>GPG Key URL</em> field empty.</p>
+</li>
+
+<li>
+<p>Click the <em>Continue</em> button.</p>
+</li>
+</ol>
+
+<h2 id='ssh_credentials'>SSH Credentials</h2>
+
+<ol>
+<li>
+<p>Select <em>Login to all hosts as root</em>.</p>
+</li>
+
+<li>
+<p>Select <em>All hosts accept same password</em>.</p>
+
+<p>a. Enter the SSH login password for the cluster. The default password is <em>crowbar</em>.</p>
+
+<p>b. Confirm the password.</p>
+</li>
+
+<li>
+<p>Click the <em>Start Installation</em> button.</p>
+</li>
+
+<li>
+<p>Accept the default settings for the SSH port and number of simultaneous installations.</p>
+</li>
+</ol>
+
+<h2 id='package_install'>Package Install</h2>
+
+<p>You will see bar graphs next to each node and the name of the package it is installing.</p>
+
+<ol>
+<li>Wait for the installation process to complete.</li>
+
+<li>Click the <em>Continue</em> button.</li>
+</ol>
+
+<h2 id='host_inspector'>Host Inspector</h2>
+
+<p>The Cloudera Manager Host Inspector runs during this part of the installation process in order to validate the proper cluster configuration for the Hadoop installation.</p>
+
+<ol>
+<li>Wait for this process to complete.</li>
+
+<li>Click the <em>Run Again</em> button if you want to run the Host Inspector again.</li>
+
+<li>Click the <em>Continue</em> button.</li>
+</ol>
+
+<h2 id='service_selection'>Service Selection</h2>
+
+<ol>
+<li>Select the services that you want to install. You can install All Services now or Core Services and optionally add additional services in the future.</li>
+
+<li>Click the <em>Inspect Role Assignments</em> button to configure the Hadoop cluster services.</li>
+</ol>
+
+<p><strong>Important:</strong> <strong>Do not</strong> select <em>Continue</em>, as this will give you the default role assignments, which may not be acceptable to you.</p>
+
+<h2 id='inspect_role_assignments_1'>Inspect Role Assignments #1</h2>
+
+<ol>
+<li>Select the Cloudera Manager role assignments for Hadoop cluster deployment.</li>
+
+<li>Click the <em>Continue</em> button.</li>
+</ol>
+
+<h2 id='inspect_role_assignments_2'>Inspect Role Assignments #2</h2>
+
+<p>If you entered the Cloudera Manager License key, you will see this additional screen.</p>
+
+<ol>
+<li>Select the role assignments for Hadoop add-ons services and monitoring services (Activity Monitor, Service Monitor Resource Manager). Best practice is to assign these roles to the Edge node.</li>
+
+<li>Click the <em>Continue</em> button.</li>
+</ol>
+
+<h2 id='monitoring_database_setup'>Monitoring Database Setup</h2>
+
+<p>If you entered the Cloudera Manager License key, you will see this additional screen.</p>
+
+<ol>
+<li>Select <em>Use Embedded Database</em>.</li>
+
+<li>You can leave the rest of the settings at default values unless you want to change them.</li>
+
+<li>Click the <em>Test Connection</em> button to make sure you can connect to all the databases (required).</li>
+
+<li>Click the <em>Continue</em> button.</li>
+</ol>
+
+<h2 id='review_configuration_changes'>Review Configuration Changes</h2>
+
+<p>If you entered the Cloudera Manager License key, you will see this additional screen.</p>
+
+<ol>
+<li>Set the mail server hostname for alerts to <em>localhost</em>.</li>
+
+<li>Set the mail server message recipients for alerts to <em>root</em>.</li>
+
+<li>Click the <em>Continue</em> button.</li>
+</ol>
+
+<h2 id='cluster_services_initialization'>Cluster Services Initialization</h2>
+
+<ol>
+<li>Wait for the Hadoop cluster installation process to complete.</li>
+
+<li>Click the <em>Continue</em> button.</li>
+</ol>
+
+<h2 id='configuration_completion'>Configuration Completion</h2>
+
+<p>If the Hadoop configuration steps complete successfully, you will see the final Cloudera Manager confirmation screen.</p>
+
+<ol>
+<li>Click the <em>Continue</em> button.</li>
+</ol>
+
+<h2 id='service_display'>Service Display</h2>
+
+<p>This is the normal start-up screen after Cloudera Manager has completed the installation steps.</p>
+          <p></p>
+        </div>
+      </div>
+            <div class="container-fluid">
+        <img src="/images/dell-open-source.png" width="175" height="49" class="pull-right"> 
+      </div>
+
+    </div>
+  </body>
+
+</html>
