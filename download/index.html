@@ -2,7 +2,7 @@
 <html>
   
   <head>
-    <title>Getting Help</title>
+    <title>Downloads</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <link rel="stylesheet" href="/css/bootstrap.css">
@@ -109,35 +109,23 @@
         <div class="span8">
           <p></p>
 		       
-           <h2>Crowbar IRC Channel</h2>
-          <p>The channel is
-            <code>#crowbar</code>on
-            <a href="http://freenode.net/">FreeNode</a> .</p>
-          <ul>
-            <li>You can
-              <a href="irc://irc.freenode.net/#crowbar">connect via the <code>irc.freenode.net</code> server</a> , or via
-              <a href="http://webchat.freenode.net/?channels=crowbar">webchat</a> 
-            </li>
-            <li>
-              <a href="http://crowbar.newgoliath.com/irc/#home">Channel logs</a> are also available.</li>
-          </ul>
-          <h2>Crowbar Mailing List</h2>
-          <p>Crowbar mailing list:
-            <a href="http://lists.us.dell.com/mailman/listinfo/crowbar">http://lists.us.dell.com/mailman/listinfo/crowbar</a> (ignore any SSL certificate warnings).</p>
-          <p>All communication to members who are subscribed to the list can go to
-            crowbar@lists.us.dell.com. However, the mailing server is configured so
-            that the “From” header will appear as crowbar@dell.com (instead of crowbar@lists.us.dell.com),
-            and so all sub-sequent replies to this address will fail since it does
-            not exist in the Dell corporate Exchange servers.</p>
-          <p>We are working to address this issue and it should be resolved by launch.</p>
-          <h2>Crowbar Wiki</h2>
-          <p>There's also an available Wiki (hosted on Github) with much more information,
-            tips &amp; tricks. If there's something missing, please create a ticket
-            or just add it yourself.
-            <a href="https://github.com/crowbar/crowbar/wiki">The wiki is available here.</a> 
-          </p>
-
-
+ <h1>Downloads</h1>
+<p>When Crowbar was first envisioned one of the key requirements was for it to function without any outside internet connectivity. This means everything you need to roll out your application of choice (Hadoop or OpenStack) comes on a single <span class="caps">ISO</span> image. Depending on your choice of application, Crowbar is currently made available in two different variants:</p>
+<div class="row-fluid">
+<div class="span6">
+<p><b>Cloudera Hadoop powered by Crowbar</b><br />
+This configuration runs atop of CentOS 6.x and deploys Cloudera Hadoop into a clustered application.</p>
+<p><a href="https://sourceforge.net/projects/crowbar/files/hadoop/" class="btn btn-success btn-medium">Download Hadoop</a></p>
+</div>
+<div class="span6">
+<p><b>OpenStack powered by Crowbar</b><br />
+This configuration runs atop of Ubuntu 12.04 <span class="caps">LTS</span> and deploys OpenStack into a clustered application.</p>
+<p><a href="https://sourceforge.net/projects/crowbar/files/openstack/" class="btn btn-success btn-medium">Download OpenStack</a></p>
+</div>
+</div>
+<p/>
+<p/>
+<p>Pre-packaged builds are made available on an irregular basis, we&#8217;ll soon be switching to a more regular cadence. Until then you might choose to follow <a href="/docs/build-crowbar.html">these insturctions to create your own build using the Github source</a></p>
           <p></p>
         </div>
       </div>
