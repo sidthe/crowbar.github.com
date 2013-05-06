@@ -5,7 +5,7 @@ These are the Jekyll files used to create the crowbar.github.com home. These can
 
 ## 1. Install Jekyll & Dependencies
 ```
-gem install redcloth -v 4.2.9 --no-ri --no-rdoc
+gem install RedCloth -v 4.2.9 --no-ri --no-rdoc
 gem install rdiscount -v 1.6.8 --no-ri --no-rdoc
 gem install maruku -v 0.6.0 --no-ri --no-rdoc
 gem install redcarpet -v 2.1.1 --no-ri --no-rdoc
@@ -30,4 +30,3 @@ jekyll --pygments --no-lsi --no-server
 ```
 
 If the site was generate successfully it should now be located in _site.
-
