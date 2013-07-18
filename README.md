@@ -4,6 +4,7 @@ These are the Jekyll files used to create the crowbar.github.com home. These can
 
 
 ## 1. Install Jekyll & Dependencies
+Note: Some problems were found running these instructions with Ruby 1.9.x. Everything documented here is working under Ruby 1.8.7.
 ```
 gem install RedCloth -v 4.2.9 --no-ri --no-rdoc
 gem install rdiscount -v 1.6.8 --no-ri --no-rdoc
