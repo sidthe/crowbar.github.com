@@ -2,7 +2,7 @@
 <html>
   
   <head>
-    <title>Building your own ISO</title>
+    <title>Building your own 2.x ISO</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <link rel="stylesheet" href="/css/bootstrap.css">
@@ -112,12 +112,14 @@
         <div class="span8">
           <p></p>
 		      
-    <a title="Edit this document (requires Github Sign-In)" class="pull-left" href="https://github.com/crowbar/barclamp-crowbar/edit/release/pebbles/master/doc/devguide/devtool-build.md">
+    <a title="Edit this document (requires Github Sign-In)" class="pull-left" href="https://github.com/crowbar/barclamp-crowbar/edit/master/doc/devguide/devtool-build.md">
         <span class="btn-label edit-icon"></span>
     </a>
     <!-- <div class="edit-icon">You're a Star!</div> -->
  
- <h2 id='build_your_own_crowbar_1x_iso_for_hadoop_or_openstack'>Build your own Crowbar 1.x ISO for Hadoop or OpenStack</h2>
+ <h2 id='build_your_own_crowbar_iso_for_2x'>Build your own Crowbar ISO for 2.x</h2>
+
+<p><strong>Note:</strong> Crowbar 2.x is currently not fully functional. As a result the instructions below are only to be used by developers intending to contribute to the effort.</p>
 
 <p>Building Crowbar is not an activity intended for users. If you simply want to download an ISO to either deploy Hadoop or OpenStack, I suggest you get one of our <a href='http://crowbar.github.io/download/'>pre-compiled ISOs</a>.</p>
 
@@ -126,10 +128,6 @@
 <p>Unlike many projects Crowbar spans many repositories, which almost all the time need to be managed simultaneously. This means that branches or pull requests often times impact multiple repositories at once. In order to more easily manage this, we&#8217;ve created <a href='https://github.com/crowbar/crowbar/blob/master/README.dev-and-workflow'>a tool called the Dev Tool</a>, which makes some of these common tasks easier.</p>
 
 <p><strong>Note:</strong> This page documents how to use the Dev Tool to create a Crowbar ISO. For more detailed documentation specifically on how to use the tool for regular development, how to submit pull-requests, how releases are defined, please refer to the <a href='https://github.com/crowbar/crowbar/blob/master/README.dev-and-workflow'>README.dev-and-workflow</a>.</p>
-
-<blockquote>
-<p>These instructions are for Crowbar 1.x! We have diverged the <a href='https://github.com/crowbar/barclamp-crowbar/blob/master/doc/devguide/devtool-build.md'>Crowbar 2.x instructions</a> from 1.x.</p>
-</blockquote>
 
 <h3 id='prerequisites'>Pre-Requisites:</h3>
 
@@ -175,7 +173,12 @@ mkisofs binutils markdown erlang debhelper python-pip \
 build-essential libopenssl-ruby1.8 libssl-dev zlib1g-dev
 
 # let&#39;s install some needed gems next
-sudo gem install json net-http-digest_auth kwalify bundler rake rcov rspec --no-ri --no-rdoc</code></pre>
+sudo gem install json net-http-digest_auth kwalify bundler delayed_job rake rcov rspec --no-ri --no-rdoc
+
+# For CROWBAR 2 ONLY!  switch to Ruby 1.9 you need the following (do NOT do this for 1.x dev work!)
+sudo update-alternatives --config ruby (to make Ruby 1.9.1 the default. ruby -v will report version 1.9.3)
+sudo update-alternatives --config gem (to make Gem 1.9 the default, gem -v will report version 1.9)
+sudo gem install ruby1.9.1-dev builder bluecloth</code></pre>
 
 <h4 id='put_the_needed_base_isos_in_place'>Put the needed base ISOs in place</h4>
 
