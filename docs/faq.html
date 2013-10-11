@@ -112,7 +112,8 @@
         <div class="span8">
           <p></p>
 		       
- <h1 id='frequently_asked_questions'>Frequently Asked Questions</h1>
+ 
+<h1 id="frequently_asked_questions">Frequently Asked Questions</h1>
 
 <p>Some common questions about Crowbar usage, and how to resolve them.</p>
 
@@ -125,11 +126,11 @@
 <ul>
 <li><strong>Question</strong>: Can I boot the Crowbar admin node from an ISO image instead of a CD/DVD drive?</li>
 
-<li><strong>Answer</strong>: Yes. Ensure that you have a DHCP/BootP service enabled, and that it contains the ISO that you want to use. Then, point the Crowbar admin node&#8217;s boot device to that image.</li>
+<li><strong>Answer</strong>: Yes. Ensure that you have a DHCP/BootP service enabled, and that it contains the ISO that you want to use. Then, point the Crowbar admin node’s boot device to that image.</li>
 </ul>
 <hr />
 <ul>
-<li><strong>Question</strong>: Why are my nodes stuck in &#8220;discovered&#8221; mode?</li>
+<li><strong>Question</strong>: Why are my nodes stuck in “discovered” mode?</li>
 
 <li><strong>Answer</strong>: You must allocate the nodes with barclamps via Crowbar before you can use them.</li>
 </ul>
@@ -147,7 +148,7 @@
 </ul>
 <hr />
 <ul>
-<li><strong>Question</strong>: I cannot PXE boot a node that I added to my cluster. I get a &#8220;redundant login&#8221; error message. Why?</li>
+<li><strong>Question</strong>: I cannot PXE boot a node that I added to my cluster. I get a “redundant login” error message. Why?</li>
 
 <li><strong>Answer</strong>: You may have a PXE boot server conflicting with the Crowbar installer running on the admin node. Power off the Crowbar admin node, then attempt to PXE boot the new node. If the new node PXE boots, you have a conflicting PXE boot server. Power off the new node, disable the conflicting server, restart the Crowbar admin node, then power on the new node to allow it to PXE boot from the Crowbar admin node.</li>
 </ul>
@@ -165,9 +166,9 @@
 </ul>
 <hr />
 <ul>
-<li><strong>Question</strong>: Instances for tenants in my OpenStack environment can ping other tenants&#8217; instances. I don&#8217;t want that! What can I do to prevent that from happening?</li>
+<li><strong>Question</strong>: Instances for tenants in my OpenStack environment can ping other tenants’ instances. I don’t want that! What can I do to prevent that from happening?</li>
 
-<li><strong>Answer</strong>: Edit the Nova barclamp to set &#8220;Use Tenant VLANs&#8221; to &#8220;True&#8221;, then re-deploy.</li>
+<li><strong>Answer</strong>: Edit the Nova barclamp to set “Use Tenant VLANs” to “True”, then re-deploy.</li>
 </ul>
 <hr />
 <ul>
@@ -175,6 +176,7 @@
 
 <li><strong>Answer</strong>: No. Just re-apply the barclamp proposal in Crowbar.</li>
 </ul>
+
           <p></p>
         </div>
       </div>

@@ -112,7 +112,8 @@
         <div class="span8">
           <p></p>
 		       
- <h3 id='bdd_testing'>BDD Testing</h3>
+ 
+<h3 id="bdd_testing">BDD Testing</h3>
 
 <p>Crowbar includes a Business Driven Development (BDD) framework written in Erlang that is based on the Cucumber DSL (Domain Specific Language).</p>
 
@@ -134,36 +135,22 @@
 <p>The site you are trying to test MUST BE RUNNING!</p>
 </blockquote>
 
-<h3 id='using_the_bdd_tool'>Using the BDD tool</h3>
+<h3 id="using_the_bdd_tool">Using the BDD tool</h3>
 
 <ol>
-<li>
-<p><code>cd /opt/dell/crowbar_framework/BDD</code></p>
-</li>
+<li><code>cd /opt/dell/crowbar_framework/BDD</code></li>
 
-<li>
-<p><code>linux.sh</code> or <code>Win7.bat</code> to compile the erlang code depending on your platform (may give an error, that&#8217;s ok)</p>
-</li>
+<li><code>linux.sh</code> or <code>Win7.bat</code> to compile the erlang code depending on your platform (may give an error, that’s ok)</li>
 
-<li>
-<p><code>erl</code> to start a command shell for erlang</p>
+<li><code>erl</code> to start a command shell for erlang</li>
 
-<ol>
-<li>
-<p><code>bdd:test().</code> will run all the tests and report the results. Test results are copied to a <code>../tmp/bbd_results.out</code> with a date/time stamp so you can review test status (see failed() below).</p>
-</li>
+<li><code>bdd:test().</code> will run all the tests and report the results. Test results are copied to a <code>../tmp/bbd_results.out</code> with a date/time stamp so you can review test status (see failed() below).</li>
 
-<li>
-<p><code>bdd:feature(name).</code> will run just the named feature set. You can pass the feature name as an atom or string.</p>
-</li>
+<li><code>bdd:feature(name).</code> will run just the named feature set. You can pass the feature name as an atom or string.</li>
 
-<li>
-<p><code>bdd:scenario(name, id).</code> will run just the scenario selected from the feature file. ID&#8217;s are assigned by BDD based on a hash of the scenario name.</p>
-</li>
+<li><code>bdd:scenario(name, id).</code> will run just the scenario selected from the feature file. ID’s are assigned by BDD based on a hash of the scenario name.</li>
 
-<li>
-<p><code>bdd:debug(config, name, id).</code> will run just the scenario selected from the feature file with debug logging flags. ID&#8217;s are assigned by BDD based on a hash of the scenario name.</p>
-
+<li><code>bdd:debug(config, name, id).</code> will run just the scenario selected from the feature file with debug logging flags. ID’s are assigned by BDD based on a hash of the scenario name.
 <ol>
 <li>You may also pass a list of the specific log levels requested. (if omitted, <code>debug</code> is assumed)</li>
 
@@ -171,15 +158,9 @@
 </ol>
 </li>
 
-<li>
-<p><code>bdd:failed(config).</code> will rerun just the failed tests using the test results output file (<code>../tmp/bbd_results.out</code>).</p>
-</li>
+<li><code>bdd:failed(config).</code> will rerun just the failed tests using the test results output file (<code>../tmp/bbd_results.out</code>).</li>
 
-<li>
-<p><code>bdd:steps().</code> will show you all the available step definitions</p>
-</li>
-</ol>
-</li>
+<li><code>bdd:steps().</code> will show you all the available step definitions</li>
 </ol>
 
 <blockquote>
@@ -187,29 +168,23 @@
 </blockquote>
 
 <blockquote>
-<p>Note: The default tests run as the &#8220;developer&#8221; user so you must be in development mode to use them!</p>
+<p>Note: The default tests run as the “developer” user so you must be in development mode to use them!</p>
 </blockquote>
 
 <p>The BDD test results are reported using a condensed format with the feature name, total tests, passed tests, failed tests, skipped tests, and IDs of the failed tests.</p>
 
-<h4 id='test_files'>Test Files</h4>
+<h4 id="test_files">Test Files</h4>
 
-<p>Each barclamp is expected to add it&#8217;s own tests to the suite</p>
+<p>Each barclamp is expected to add it’s own tests to the suite</p>
 
 <p>The Crowbar barclamp tests include:</p>
 
 <ul>
-<li>
-<p>dashboard.feature - Tests the nodes UI view</p>
-</li>
+<li>dashboard.feature - Tests the nodes UI view</li>
 
-<li>
-<p>documentation.feature - Tests the documentation/help system</p>
-</li>
+<li>documentation.feature - Tests the documentation/help system</li>
 
-<li>
-<p>navigation.feature</p>
-
+<li>navigation.feature
 <ul>
 <li>Tests the basic menu system</li>
 
@@ -217,13 +192,9 @@
 </ul>
 </li>
 
-<li>
-<p>proposals.feature - Tests the Proposal Status API</p>
-</li>
+<li>proposals.feature - Tests the Proposal Status API</li>
 
-<li>
-<p>nodes.feature</p>
-
+<li>nodes.feature
 <ul>
 <li>Tests the node status API</li>
 
@@ -231,9 +202,7 @@
 </ul>
 </li>
 
-<li>
-<p>groups.feature</p>
-
+<li>groups.feature
 <ul>
 <li>Tests the group API</li>
 
@@ -241,28 +210,18 @@
 </ul>
 </li>
 
-<li>
-<p>scaffolds.feature - Tests all the feature objects</p>
-</li>
+<li>scaffolds.feature - Tests all the feature objects</li>
 
-<li>
-<p>authenticate.feature - Tests login</p>
-</li>
+<li>authenticate.feature - Tests login</li>
 
-<li>
-<p>users.feature - Tests user management screen</p>
-</li>
+<li>users.feature - Tests user management screen</li>
 
-<li>
-<p>attributes - Tests Jig attributes API</p>
-</li>
+<li>attributes - Tests Jig attributes API</li>
 
-<li>
-<p>jigs - Tests the Jig engine API</p>
-</li>
+<li>jigs - Tests the Jig engine API</li>
 </ul>
 
-<h3 id='test_debugging'>Test Debugging</h3>
+<h3 id="test_debugging">Test Debugging</h3>
 
 <p>The BDD system generates trace files for each test executed. These trace files have the results of all the steps for each scenario. If the test passes, the trace file is deleted automatically.</p>
 
@@ -272,7 +231,7 @@
 <p>Remember, if you change code then you must recompile (e.g.: <code>c(bdd).</code>) it!</p>
 </blockquote>
 
-<h4 id='running_bdd_from_erlang'>Running BDD from Erlang</h4>
+<h4 id="running_bdd_from_erlang">Running BDD from Erlang</h4>
 
 <p>Erlang is a functional language, that means that you can run nearly any step if you can duplicate the input. Nearly every BDD method requires the Config list. The config list contains critical information about the environment and session data based on a system login.</p>
 
@@ -284,7 +243,7 @@
 
 <p>Once you have a valid Config list, there are wide range of options. You can execute the global inspector using <code>bdd:inspect(Config).</code> or one in each feature using <code>node:inspector(Config).</code></p>
 
-<h4 id='interactive_debugger'>Interactive Debugger</h4>
+<h4 id="interactive_debugger">Interactive Debugger</h4>
 
 <p>To use the interactive debugger, you must</p>
 
@@ -300,7 +259,7 @@
 <p>The debugger is a little flaky. Have patience!</p>
 </blockquote>
 
-<h4 id='bdd_inspector'>BDD Inspector</h4>
+<h4 id="bdd_inspector">BDD Inspector</h4>
 
 <p>Since BDD works against a live system without rollback, BDD has added checks to make sure that tests to not leave testing artificats in the database after a successful run.</p>
 
@@ -311,6 +270,7 @@
 <p>To retrieve the last inspector report, use <code>bdd:is_clean(Config).</code></p>
 
 <p>To generate the list used for the inspector report, use <code>bdd:inspect(Config).</code></p>
+
           <p></p>
         </div>
       </div>

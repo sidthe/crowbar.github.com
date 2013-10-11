@@ -129,85 +129,33 @@
     </a>
     <!-- <div class="edit-icon">You're a Star!</div> -->
  
- <h1 id='configuring_and_installing_the_crowbar_admin_node'>Configuring and Installing the Crowbar Admin Node</h1>
+ 
+<h1 id="configuring_and_installing_the_crowbar_admin_node">Configuring and Installing the Crowbar Admin Node</h1>
 
-<p>The admin node must be configured first. Installing the admin node involves installing the base operating system, optionally customizing the Crowbar configuration (primarily the networking configuration), and installing Crowbar itself.</p>
+<p>Installing the admin node involves installing the base operating system, optionally customizing the Crowbar configuration (primarily the networking configuration), and installing Crowbar itself.</p>
 
-<p>Once configured, Crowbar running on the admin node is used to configure and deploy the rest of the solution, and to provide ongoing operations management. The admin node manages all the cluster compute and storage nodes. It assigns the other nodes IP addresses, PXE boots them, configures them, and provides them the necessary software for their roles.</p>
+<p>Crowbar runs on the admin node and is used to configure and deploy the rest of the solution. Crowbar also provides ongoing operations management, managing the cluster compute and storage nodes. It assigns the other nodes IP addresses, PXE boots them, configures them, and provides them the necessary software for their roles.</p>
 
 <p><strong>Note:</strong> The admin node must be the <em>only</em> DHCP server visible to the compute and storage nodes.</p>
 
-<p>The initial admin node installation is performed by PXE booting the admin node from a bootstrap node, typically a laptop. To install the Crowbar admin node:</p>
+<p>Installation of the OS onto the admin node is performed by booting from the iso image or burn the iso image to a DVD and use the DVD to load the OS to a physical system.</p>
 
 <ol>
 <li>
-<p>Obtain a pre-built Crowbar ISO via <a href='http://crowbar.github.com/download/'>Downloads</a>.</p>
+<p>Obtain a pre-built Crowbar ISO via <a href="http://10.9.244.31:3389/jenkins/job/Build-Crowbar-2.0-Development-Master/lastSuccessfulBuild/artifact">Downloads</a> or (http://10.152.246.51/jenkins/job/Build-Crowbar-2.0-Development-Master/lastSuccessfulBuild/artifact)</p>
 </li>
 
 <li>
-<p>Power on the admin node, and ensure that:</p>
-
-<p>a. It is set up to boot from the hard disk for subsequent boots.</p>
-
-<p>b. This first boot (and only this first boot) is a network boot.</p>
+<p>Deploy the iso by booting from it using a VM or burn the image to a DVD and use it to bootstrap the OS onto a physical system.</p>
 </li>
 
 <li>
-<p>Power off the admin node.</p>
-</li>
-
-<li>
-<p>Make sure you have VMware Player installed on the laptop.</p>
-</li>
-
-<li>
-<p>Make sure you have the Crowbar ISO image loaded on the laptop.</p>
-</li>
-
-<li>
-<p>Turn off or disable wireless networking on the laptop.</p>
-</li>
-
-<li>
-<p>Open the VMware machine configuration distributed with Crowbar (this will be a <em>.vmx</em> file).</p>
-</li>
-
-<li>
-<p>Edit the machine settings within Player to ensure that the network adapter is configured to use Bridged Networking, connected to the physical network adapter.</p>
-</li>
-
-<li>
-<p>Configure VMware Player to mount the Crowbar ISO image as a DVD in the VM.</p>
-</li>
-
-<li>
-<p>Connect the network crossover cable between <em>eth0</em> of the admin node and the network port of the laptop.</p>
-</li>
-
-<li>
-<p>Power on the VM. It should boot, and present a login prompt in under a minute.</p>
-</li>
-
-<li>
-<p>Power on the admin node. It should PXE boot, obtaining its image from the VM. The admin node will automatically install its operating system and deployment software.</p>
-</li>
-
-<li>
-<p>Once the installation is complete, power down the installer VM, and disconnect the laptop.</p>
-</li>
-
-<li>
-<p>Reconnect <em>eth0</em> of the admin node to the appropriate switch port.</p>
-
-<p>When this process has completed, the operating system and deployment software has been installed on the admin node. The Crowbar software has been copied to the admin node, but final installation has not been completed.</p>
-</li>
-
-<li>
-<p>Verify the Crowbar admin node installation by logging into Crowbar UI, and ensuring that the admin node&#8217;s icon is green.</p>
+<p>Once booted to a black screen, hit Alt-F2 to see the prompt and login as crowbar/crowbar</p>
 </li>
 </ol>
 
-<p><strong>Note:</strong> This can take some time; please be patient.</p>
+<p>When this process has completed, the operating system and deployment software has been installed on the admin node. The Crowbar software has been copied to the admin node, but final installation has not been completed.</p>
+
           <p></p>
         </div>
       </div>

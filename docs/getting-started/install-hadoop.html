@@ -129,7 +129,8 @@
     </a>
     <!-- <div class="edit-icon">You're a Star!</div> -->
  
- <h1 id='installing_hadoop'>Installing Hadoop</h1>
+ 
+<h1 id="installing_hadoop">Installing Hadoop</h1>
 
 <p>Use these instructions to install and configure a Hadoop cluster using Crowbar.</p>
 
@@ -149,7 +150,7 @@
 </li>
 
 <li>
-<p>Verify nodes statuses in the Crowbar UI by navigating to <em>Nodes &gt; Dashboard</em>, and then ensuring that all nodes&#8217; icons are green.</p>
+<p>Verify nodes statuses in the Crowbar UI by navigating to <em>Nodes &gt; Dashboard</em>, and then ensuring that all nodes’ icons are green.</p>
 </li>
 
 <li>
@@ -182,16 +183,16 @@ $ sudo service cloudera-scm-server restart</code></pre>
 </li>
 </ol>
 
-<h2 id='node_search'>Node Search</h2>
+<h2 id="node_search">Node Search</h2>
 
 <ol>
 <li>Enter the IP range or hostname search pattern for all Hadoop cluster nodes. Cloudera Manager will search the cluster using this pattern and will consider any node with a Cloudera Manager agent process running on it as a valid Hadoop node candidate. For example:</li>
 </ol>
 
 <ul>
-<li><em>192.168.124.<span>80-90</span></em> will attempt to discover all the nodes between 192.168.124.80 and 192.168.124.90</li>
+<li><em>192.168.124.[80-90]</em> will attempt to discover all the nodes between 192.168.124.80 and 192.168.124.90</li>
 
-<li><em>192.168.124.8<span>1-3</span></em> will attempt to discover 192.168.124.81, 192.168.124.82, and 192.168.124.83</li>
+<li><em>192.168.124.8[1-3]</em> will attempt to discover 192.168.124.81, 192.168.124.82, and 192.168.124.83</li>
 
 <li>For additional information on Cloudera Manager search patterns, see the <em>search for hostnames and/or IP addresses using patterns</em> link on the Cloudera Manager user Interface.</li>
 </ul>
@@ -202,7 +203,7 @@ $ sudo service cloudera-scm-server restart</code></pre>
 <li>Click the <em>Search</em> button.</li>
 </ol>
 
-<h2 id='node_search_results'>Node Search Results</h2>
+<h2 id="node_search_results">Node Search Results</h2>
 
 <ol>
 <li>Verify that all your Hadoop nodes have been discovered.</li>
@@ -210,7 +211,7 @@ $ sudo service cloudera-scm-server restart</code></pre>
 <li>Make any cluster configuration adjustments by selecting or deselecting any checkboxes.</li>
 </ol>
 
-<h2 id='repository_configuration'>Repository Configuration</h2>
+<h2 id="repository_configuration">Repository Configuration</h2>
 
 <ol>
 <li>
@@ -228,7 +229,7 @@ $ sudo service cloudera-scm-server restart</code></pre>
 
 <p>a. Or, select <em>Custom Repository</em> for Impala.</p>
 
-<p>b. Enter this URL - <em><a title='Impala repository' href='http://beta.cloudera.com/impala/redhat/6/x86_64/impala/0/'>http://beta.cloudera.com/impala/redhat/6/x86_64/impala/0/</a></em></p>
+<p>b. Enter this URL - <em><a href="http://beta.cloudera.com/impala/redhat/6/x86_64/impala/0/" title="Impala repository">http://beta.cloudera.com/impala/redhat/6/x86_64/impala/0/</a></em></p>
 </li>
 
 <li>
@@ -246,7 +247,7 @@ $ sudo service cloudera-scm-server restart</code></pre>
 </li>
 </ol>
 
-<h2 id='ssh_credentials'>SSH Credentials</h2>
+<h2 id="ssh_credentials">SSH Credentials</h2>
 
 <ol>
 <li>
@@ -270,7 +271,7 @@ $ sudo service cloudera-scm-server restart</code></pre>
 </li>
 </ol>
 
-<h2 id='package_install'>Package Install</h2>
+<h2 id="package_install">Package Install</h2>
 
 <p>You will see bar graphs next to each node and the name of the package it is installing.</p>
 
@@ -280,7 +281,7 @@ $ sudo service cloudera-scm-server restart</code></pre>
 <li>Click the <em>Continue</em> button.</li>
 </ol>
 
-<h2 id='host_inspector'>Host Inspector</h2>
+<h2 id="host_inspector">Host Inspector</h2>
 
 <p>The Cloudera Manager Host Inspector runs during this part of the installation process in order to validate the proper cluster configuration for the Hadoop installation.</p>
 
@@ -292,7 +293,7 @@ $ sudo service cloudera-scm-server restart</code></pre>
 <li>Click the <em>Continue</em> button.</li>
 </ol>
 
-<h2 id='service_selection'>Service Selection</h2>
+<h2 id="service_selection">Service Selection</h2>
 
 <ol>
 <li>Select the services that you want to install. You can install All Services now or Core Services and optionally add additional services in the future.</li>
@@ -302,7 +303,7 @@ $ sudo service cloudera-scm-server restart</code></pre>
 
 <p><strong>Important:</strong> <strong>Do not</strong> select <em>Continue</em>, as this will give you the default role assignments, which may not be acceptable to you.</p>
 
-<h2 id='inspect_role_assignments_1'>Inspect Role Assignments #1</h2>
+<h2 id="inspect_role_assignments_1">Inspect Role Assignments #1</h2>
 
 <ol>
 <li>Select the Cloudera Manager role assignments for Hadoop cluster deployment.</li>
@@ -310,7 +311,7 @@ $ sudo service cloudera-scm-server restart</code></pre>
 <li>Click the <em>Continue</em> button.</li>
 </ol>
 
-<h2 id='inspect_role_assignments_2'>Inspect Role Assignments #2</h2>
+<h2 id="inspect_role_assignments_2">Inspect Role Assignments #2</h2>
 
 <p>If you entered the Cloudera Manager License key, you will see this additional screen.</p>
 
@@ -320,7 +321,7 @@ $ sudo service cloudera-scm-server restart</code></pre>
 <li>Click the <em>Continue</em> button.</li>
 </ol>
 
-<h2 id='monitoring_database_setup'>Monitoring Database Setup</h2>
+<h2 id="monitoring_database_setup">Monitoring Database Setup</h2>
 
 <p>If you entered the Cloudera Manager License key, you will see this additional screen.</p>
 
@@ -334,7 +335,7 @@ $ sudo service cloudera-scm-server restart</code></pre>
 <li>Click the <em>Continue</em> button.</li>
 </ol>
 
-<h2 id='review_configuration_changes'>Review Configuration Changes</h2>
+<h2 id="review_configuration_changes">Review Configuration Changes</h2>
 
 <p>If you entered the Cloudera Manager License key, you will see this additional screen.</p>
 
@@ -346,7 +347,7 @@ $ sudo service cloudera-scm-server restart</code></pre>
 <li>Click the <em>Continue</em> button.</li>
 </ol>
 
-<h2 id='cluster_services_initialization'>Cluster Services Initialization</h2>
+<h2 id="cluster_services_initialization">Cluster Services Initialization</h2>
 
 <ol>
 <li>Wait for the Hadoop cluster installation process to complete.</li>
@@ -354,7 +355,7 @@ $ sudo service cloudera-scm-server restart</code></pre>
 <li>Click the <em>Continue</em> button.</li>
 </ol>
 
-<h2 id='configuration_completion'>Configuration Completion</h2>
+<h2 id="configuration_completion">Configuration Completion</h2>
 
 <p>If the Hadoop configuration steps complete successfully, you will see the final Cloudera Manager confirmation screen.</p>
 
@@ -362,9 +363,10 @@ $ sudo service cloudera-scm-server restart</code></pre>
 <li>Click the <em>Continue</em> button.</li>
 </ol>
 
-<h2 id='service_display'>Service Display</h2>
+<h2 id="service_display">Service Display</h2>
 
 <p>This is the normal start-up screen after Cloudera Manager has completed the installation steps.</p>
+
           <p></p>
         </div>
       </div>
