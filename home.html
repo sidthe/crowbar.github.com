@@ -5,6 +5,7 @@
     <title>The Crowbar Project Home</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <link rel="SHORTCUT ICON"; href="images/bunny.ico">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-responsive.css">
     <link rel="stylesheet" href="themes/inspiritas/inspiritas.css">
@@ -14,30 +15,7 @@
   </head>
   
   <body>
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="/home.html"><img src="/images/crowbar-white.png" class="pull-left"></a>
-          <div class="navbar-content">
-            <ul class="nav">
-              <li class="active">
-                <a href="/home.html">Home</a> 
-              </li>
-              <li >
-                <a href="/docs/getting-help.html">Docs</a> 
-              </li>
-              <li >
-                <a href="/issues.html">Issues</a> 
-              </li>
-              <li >
-                <a href="javascript:void(0);" onclick="alert('Coming Soon')">Screenshots</a> 
-              </li>
-            </ul>
-          </div>
-          <a href="/download/" class="btn pull-right btn-success btn-large">Download</a>
-        </div>
-      </div>
-    </div>
+  
 
     <div class="container">
       <div class="hero-unit hidden-phone">
@@ -46,37 +24,43 @@
         <p>The Crowbar Project is an effort to build a complete, easy to use operational
           platform for everyone. It allows for groups of physical nodes to be
           transformed from bare-metal into a production cluster within hours. Specific applications
-          include (but are not limited to) Hadoop and OpenStack.</p>
-        <p></p>
-      </div>
-      <a class="btn btn-large btn-primary btn-block visible-phone" href="#"><span class="btn-label">Sign Up Today!</span></a>
-      <div class="row main-features">
-        <div class="span4">
-          <div class="well">
-            <h3>Get Started</h3>
-            <p>Want to try Crowbar yourself, go here.</p>
-            <a class="btn btn-primary" href="/docs/getting-started/"><span class="btn-label">Find Out More</span></a> 
-          </div>
-        </div>
-        <div class="span4">
-          <div class="well">
-            <h3>Get Help</h3>
-            <p>IRC, Mailing List, Documentation</p>
-            <a class="btn btn-info" href="/docs/getting-help.html"><span class="btn-label">Find Out More</span></a> 
-          </div>
-        </div>
-        <div class="span4">
-          <div class="well">
-            <h3>Get Serious</h3>
-            <p>Report a Bug, trying to Contribute</p>
-            <a class="btn btn-success" href="/issues.html"><span class="btn-label">Find Out More</span></a> 
-          </div>
-        </div>
+          include (but are not limited to) Ceph, Hadoop and OpenStack.</p>
+        <p>Get involved with our community!
+          <ul>
+            <li>Sign up for the group / mail list: <a href="https://groups.google.com/forum/#!forum/opencrowbar">Group Groups OpenCrowbar</a></li>
+            <li>Hang out with us on IRC: <a href="https://botbot.me/freenode/crowbar/">Freenode channel #crowbar</a></li>
+            <li>File Defects or Create Features: <a href="https://github.com/opencrowbar/core/issues?milestone=2&state=open">Github Issues</a></li>
+          </ul>
+        </p>
+        <p>The Crowbar Project has a single community with two versions under active development.</p>
 
       </div>
-      <div class="container-fluid">
-        <img src="/images/dell-open-source.png" width="175" height="49" class="pull-right"> 
-      </div>
+      <table border="1" align="left" width="80%">
+        <tr align="center">
+          <th width="50%"><a href="https://github.com/crowbar/crowbar/wiki">Crowbar v1</a></th>
+          <th width="50%"><a href="https://github.com/opencrowbar/core/">OpenCrowbar (aka v2)</a></th>
+        </tr>
+        <tr align="center">
+          <td>The original Chef integrated provisioning tool.  Since 2014, primarily maintained by SUSE for OpenStack deployments.</td>
+          <td>The re-architected replacement for Crowbar v1 supports a much broader set of operating systems, applications, configuration managers and hardware (physical, virtual and containers).  OpenCrowbar is community maintained.</td>
+        </tr>
+        <tr align="center">
+          <td><a href="https://github.com/crowbar/crowbar/wiki"><img width="180px" src="images/crowbar-v1.png"></a></td>
+          <td><a href="https://github.com/opencrowbar/core/"><img width="200px" src="images/crowbar-v2.png"></a></td>
+        </tr>
+        <tr align="center" valign="center">
+          <td>Stable Release: Roxy</td>
+          <td>Stable Release: Anvil</td>
+        </tr>
+        <tr align="center" valign="center">
+          <td>Active Development: Stoney</td>
+          <td>Active Development: Master (Trunk)</td>
+        </tr>
+        <tr align="center" valign="center">
+          <td><a href="https://www.ohloh.net/p/crowbar-v1">Ohloh Stats</a> (not updated)</td>
+          <td><a href="https://www.ohloh.net/p/opencrowbar">Ohloh Stats</a></td>
+        </tr>
+      </table>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
