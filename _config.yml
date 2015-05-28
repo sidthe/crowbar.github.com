@@ -1,0 +1,21 @@
+title: "Crowbar"
+description: "Modular provisioning platform"
+keywords: "crowbar, openstack, provisoning, chef"
+
+safe: false
+
+gems:
+  - jekyll-assets
+
+exclude:
+  - Rakefile
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
+assets:
+  sources:
+    - _assets/fonts
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
