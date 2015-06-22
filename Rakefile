@@ -3,6 +3,7 @@ Bundler.setup(:default)
 
 require "jekyll"
 require "tmpdir"
+require "fileutils"
 
 desc "Generate website"
 task :generate do
@@ -19,7 +20,13 @@ end
 desc "Publish website"
 task :publish => [:generate] do
   Dir.mktmpdir do |tmp|
-    Fileutils.cp_r "_site/", tmp
+    FileUtils.cp_r(
+      Dir.glob(
+        File.expand_path("../_site/*", __FILE__)
+      ),
+      tmp
+    )
+
     Dir.chdir tmp
 
     system "ls -ali #{tmp}"
