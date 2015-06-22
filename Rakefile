@@ -5,6 +5,8 @@ require "jekyll"
 require "tmpdir"
 require "fileutils"
 
+task :default => :generate
+
 desc "Generate website"
 task :generate do
   Dir.mkdir("_site") unless File.directory? "_site"
