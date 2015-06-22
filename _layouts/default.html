@@ -22,22 +22,27 @@
     <![endif]-->
   </head>
   <body>
-    <div class="topper"></div>
-    <div class="container">
-      <h1 class="text-center title-text">The Crowbar Project</h1>
+    <div class="topper">
     </div>
-    {{ content }}
+
+    <div class="container">
+      <h1 class="text-center text-title">
+        The Crowbar Project
+      </h1>
+    </div>
+
+{{ content }}
 
     <footer>
       <p class="text-center">
-        Copyright &copy; 2011-2013 <a href="http://dell.com/openstack/">Dell</a>, 2013-2014 <a href="https://www.suse.com/products/suse-cloud/">SUSE</a>. All rights reserved.
+        Looking for the OpenCrowbar Project?
+        Find it <a href="{{ site.opencrowbar_url }}">here</a>.
+      </p>
+
+      <p class="text-center">
+        Copyright &copy; 2011-2013 <a href="{{ site.dell_url }}">Dell</a>,
+        2013-2015 <a href="{{ site.suse_url }}">SUSE</a>. All rights reserved.
       </p>
     </footer>
-
-<!--     <div class="forkme">
-      <div class="ribbon">
-        <a href="https://github.com/crowbar/crowbar.github.com">Fork me on GitHub</a>
-      </div>
-    </div> -->
   </body>
 </html>
