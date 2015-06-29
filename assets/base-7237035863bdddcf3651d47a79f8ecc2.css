@@ -1,0 +1,30 @@
+body {
+  padding-top: 0px;
+  padding-bottom: 20px;
+  cursor: default; }
+
+.topper {
+  height: 14px;
+  background-color: #337AB7;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #2E6DA4; }
+
+.text-title {
+  color: #337AB7;
+  margin-bottom: 30px; }
+
+.btn-source {
+  margin-bottom: 40px;
+  margin-top: 30px; }
+
+.boxr {
+  background-color: #eee;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin-bottom: 30px; }
+
+footer p {
+  font-size: 12px;
+  margin-bottom: 0; }
