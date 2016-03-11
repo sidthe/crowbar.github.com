@@ -1,161 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-    <title>Crowbar - Modular provisioning platform</title>
+    <title>The Crowbar Project</title>
 
-    <meta name="description" content="Modular provisioning platform" />
-    <meta name="keywords" content="crowbar, openstack, provisoning, chef" />
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="/assets/vendor-1574f05f26d315658445491488e5ee67.css">
-    <link rel="stylesheet" href="/assets/base-7237035863bdddcf3651d47a79f8ecc2.css">
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
 
-    <script src="/assets/vendor-cf500ce831b972465634e13a0a9c43a5.js"></script>
-    <script src="/assets/base-ddd0641b2805c85378dc63fff9039803.js"></script>
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-    <link rel="stylesheet" href="/assets/ie-ddd0641b2805c85378dc63fff9039803.css">
-    <script src="/assets/ie-75d177f7cfa9de43301edb8496f814bc.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  </head>
-  <body>
-    <div class="topper">
-    </div>
 
-    <div class="container">
-      <h1 class="text-center text-title">
-        The Crowbar Project
-      </h1>
-    </div>
+</head>
 
-<div class="container">
-  <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
-    <p class="text-center">
-      An openly licensed framework to build complete, easy to use
-      operational deployments. It allows for groups of physical nodes
-      to be transformed from bare-metal into a ready state production
-      cluster within hours. Originally founded in 2011 by Dell, since
-      2014 primarily maintained by <a href="https://www.suse.com/products/suse-cloud/">SUSE</a>
-      for <a href="https://www.openstack.org/">OpenStack</a> deployments.
-    </p>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-    <p class="text-center">
-      Features include <strong>CEPH</strong>, <strong>High Availability</strong>,
-      <strong>SSL Support</strong> and <strong>unattended installation</strong>.
-    </p>
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="glyphicon glyphicon-off"></i>
+                    <span> Crowbar</span>
+                </a>
+            </div>
 
-    <div class="text-center">
-      <a href="https://github.com/crowbar" class="btn btn-primary btn-lg btn-source">
-        Browse the source ›
-      </a>
-    </div>
-  </div>
-</div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contribute">Contribute</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#examples">Preview</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
-<div class="boxr">
-  <div class="container">
-    <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
-      <p class="text-center">
-        <a href="http://blog.adamspiers.org/2014/12/11/susecon-usb-stick-howto/">
-          <strong>
-            How to Build an OpenStack Cloud
-          </strong>
-          <br>
-          <small>
-            http://blog.adamspiers.org/2014/12/11/susecon-usb-stick-howto/
-          </small>
-        </a>
-      </p>
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <h1 class="brand-heading">Crowbar</h1>
+                        <p class="intro-text">Transform your bare-metal into an OpenStack Cloud in hours.
+                            <br>
+                            <span class="intro-text-small">Support for CEPH, High Availability, SSL and unattended installation included.</span>
+                        </p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-      <p class="text-center">
-        <a href="https://groups.google.com/forum/#!forum/crowbar">
-          <strong>
-            Google Group List
-          </strong>
-          <br>
-          <small>
-            https://groups.google.com/forum/#!forum/crowbar
-          </small>
-        </a>
-      </p>
+    <!-- About Section -->
 
-      <p class="text-center">
-        <a href="https://gitter.im/crowbar/crowbar">
-          <strong>
-            Gitter Chat
-          </strong>
-          <br>
-          <small>
-            https://gitter.im/crowbar/crowbar
-          </small>
-        </a>
-      </p>
+    <section id="about" class="container content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-7 col-sm-7">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SpLbDlTmVFE" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-lg-offset-1 col-md-4 col-md-offset-1 col-sm-4 col-sm-offset-1">
+                    <h2 class="brand-heading">Crowbar</h2>
+                    <p>An openly licensed framework to build complete, easy to use operational deployments. It allows for groups of physical nodes to be transformed from bare-metal into a ready state production cluster within hours. </p>
+                </div>
+            </div>
+        </div>
+        <div class="container content-section">
+            <div class="row blank-row"></div>
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1">
+                    <div class="col-xs-3">
+                        <a href="http://www.openstack.org/" target="_blank" class="thumbnail logo-default">
+                            <img src="img/openstack-logo.png" alt="125x125">
+                        </a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="https://www.cloudfoundry.org/" target="_blank" class="thumbnail logo-default">
+                            <img src="img/cloud-foundry-logo.png" alt="125x125">
+                        </a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="https://www.suse.com/promo/cloud/" target="_blank" class="thumbnail logo-default">
+                            <img src="img/suse-cloud-logo.png" alt="125x125">
+                        </a>
+                    </div>
+                    <div class="col-xs-3">
+                        <a href="http://ceph.com/" target="_blank" class="thumbnail logo-default">
+                            <img src="img/ceph-logo.png" alt="125x125">
+                        </a>
+                    </div>
+                </div>
 
-      <p class="text-center">
-        <a href="http://webchat.freenode.net/?channels=%23crowbar">
-          <strong>
-            IRC Webchat
-          </strong>
-          <br>
-          <small>
-            http://webchat.freenode.net/?channels=%23crowbar
-          </small>
-        </a>
-      </p>
+            </div>
+        </div>
+    </section>
 
-      <p class="text-center">
-        <a href="https://www.openhub.net/p/crowbar-v1">
-          <strong>
-            OpenHub Statistics
-          </strong>
-          <br>
-          <small>
-            https://www.openhub.net/p/crowbar
-          </small>
-        </a>
-      </p>
+    <!-- Contribute Section -->
+    <section id="contribute" class="text-center contribute-section">
+        <div class="content-contribute-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Contribute to Crowbar</h2>
+                    <p><b>You can contribute to Crowbar via submitting pull requests on Github</b></p>
+                    <ul class="list-inline banner-social-buttons">
+                        <li>
+                            <a href="http://blog.adamspiers.org/2014/12/11/susecon-usb-stick-howto/" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-list fa-fw"></i> <span class="network-name">Blog</span></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/crowbar" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                        </li>
+                        <li>
+                            <a href="https://groups.google.com/forum/#!forum/crowbar" target="_blank" class="btn btn-default btn-lg"><i class="fa fa-google fa-fw"></i> <span class="network-name">Google</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <p class="text-center">
-        <a href="https://github.com/crowbar">
-          <strong>
-            Source Code on GitHub
-          </strong>
-          <br>
-          <small>
-            https://github.com/crowbar
-          </small>
-        </a>
-      </p>
+    <!-- Examples Section -->
+    <section id="examples" class="container content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <h2>Get started with Crowbar</h2>
+                    <p>Install Crowbar and get started. But before you do, watch our video and learn about the basic capabilities of Crowbar</p>
+                    <p><a href="https://github.com/crowbar/crowbar/blob/master/doc/development.md" target="_blank">Learn How</a>
+                    </p>
+                </div>
+                <div class="col-lg-6 col-lg-offset-2 col-md-8 col-md-offset-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/eSnDnOF_2Ik" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container content-section">
+            <div class="row blank-row"></div>
+            <div class="row">
+                <h3>Why use and contribute to Crowbar?</h3>
+                <div class="row" style="text-align:left">
+                    <div class="col-lg-2">
+                        <h4 class="h-branded">Automation</h4>
+                        <p>Fully automated OpenStack deployment and more</p>
+                    </div>
+                    <div class="col-lg-2 col-lg-offset-1">
+                        <h4 class="h-branded">Flexibility</h4>
+                        <p>Mature and extensible architecture</p>
+                    </div>
+                    <div class="col-lg-2 col-lg-offset-1">
+                        <h4 class="h-branded">Scale</h4>
+                        <p>Proven scalability, deployed and used in large enterprises</p>
+                    </div>
+                    <div class="col-lg-2 col-lg-offset-1">
+                        <h4 class="h-branded">Well and Alive</h4>
+                        <p>Constantly new functionalities critical for deployment automation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <p class="text-center">
-        <a href="https://www.suse.com/products/suse-cloud/">
-          <strong>
-            SUSE OpenStack Cloud
-          </strong>
-          <br>
-          <small>
-            https://www.suse.com/products/suse-cloud/
-          </small>
-        </a>
-      </p>
-    </div>
-  </div>
-</div>
-
-
+    <!-- Footer -->
     <footer>
-      <p class="text-center">
-        Looking for the OpenCrowbar Project?
-        Find it <a href="http://opencrowbar.github.io/">here</a>.
-      </p>
-
-      <p class="text-center">
-        Copyright &copy; 2011-2013 <a href="http://dell.com/openstack/">Dell</a>,
-        2013-2015 <a href="https://www.suse.com/products/suse-cloud/">SUSE</a>. All rights reserved.
-      </p>
+        <div class="container text-center">
+            <p>Copyright &copy; SUSE 2016</p>
+        </div>
     </footer>
-  </body>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+</body>
+
 </html>
