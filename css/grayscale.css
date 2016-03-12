@@ -269,12 +269,13 @@ a:focus {
 }
 
 .content-section {
-    padding-top: 5%;
+    padding-top: 10%;
+    background-color: #fff;
 }
 
 .contribute-section {
     width: 100%;
-    padding: 50px 0;
+    padding: 7% 0;
     color: #fff;
     background: url(../img/contribute-bg.jpg) no-repeat bottom center scroll;
     background-color: #000;
@@ -282,9 +283,6 @@ a:focus {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
-}
-.blank-row{
-    min-height: 15%;
 }
 
 #map {
@@ -295,7 +293,12 @@ a:focus {
 
 @media(min-width:767px) {
     .content-section {
-        height: 100%;
+        background-color: #fff;
+        padding: 5% 0;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
     }
 
     .contribute-section {
@@ -308,6 +311,9 @@ a:focus {
 
     .content-contribute-section .container{
         padding-top: 20%;
+    }
+    .blank-row{
+        height: 5%;
     }
 
     #map {
@@ -371,6 +377,9 @@ ul.banner-social-buttons {
 @media(max-width:1199px) {
     ul.banner-social-buttons {
         margin-top: 15px;
+    }
+    .blank-row{
+        max-height: 15%;
     }
 }
 
