@@ -194,7 +194,7 @@ a:focus {
     }
 }
 
-@media(min-width:500px) {
+@media(min-width:480px) {
     .intro {
         height: 100%;
         padding: 0;
@@ -212,7 +212,7 @@ a:focus {
     }
 }
 
-@media(min-width:300px) {
+@media(min-width:320px) {
     .intro {
         height: 100%;
         padding: 0;
@@ -348,7 +348,7 @@ a:focus {
     }
 }
 
-@media(min-width:550px) {
+@media(min-width:480px) {
     .content-section {
         background-color: #fff;
         padding-top: 10%;
@@ -374,7 +374,7 @@ a:focus {
     }
 }
 
-@media(min-width:300px) {
+@media(min-width:320px) {
     .content-section {
         background-color: #fff;
         padding-bottom: 2%;
